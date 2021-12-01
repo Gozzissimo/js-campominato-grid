@@ -1,3 +1,9 @@
+:root {
+  --square-size-small: 7;
+  --square-size-medium: 9:
+  --square-size-mbig: 10; 
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -34,21 +40,53 @@ html {
     width: 100%;
     height: 80vh;
     background-color: #7FFFD4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid {
-    background-color: red;
-    display: flex
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid darkblue;
+}
+
+.grid.small {
+    height: 350px;
+    width: 350px;
+}
+
+.grid.medium {
+    height: 400px;
+    width: 400px;
+}
+
+.grid.large {
+    height: 500px;
+    width: 500px;
 }
 
 .grid .square {
-    border: 1px solid blue;
+    border: 1px solid darkblue;
+    color: darkblue;
 }
 
 .grid .square.small {
-    height: 20px;
-    width: 20px;
+    width: calc(100% / var(--square-size-small));
+    height: calc(100% / var(--square-size-small));
 }
+
+.grid .square.medium {
+    width: calc(100% / var(--square-size-medium));
+    height: calc(100% / var(--square-size-medium));
+}
+
+.grid .square.big {
+    width: calc(100% / var(--square-size-big));
+    height: calc(100% / var(--square-size-big));
+}
+
+
 
 .footer {
     width: 100%;
