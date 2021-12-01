@@ -46,7 +46,7 @@ html {
 }
 
 .grid {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     border: 2px solid darkblue;
     height: 600px;
