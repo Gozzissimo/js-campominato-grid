@@ -1,7 +1,7 @@
 :root {
   --square-size-small: 7;
-  --square-size-medium: 9:
-  --square-size-mbig: 10; 
+  --square-size-medium: 9;
+  --square-size-large: 10;
 }
 
 * {
@@ -49,26 +49,18 @@ html {
     display: flex;
     flex-wrap: wrap;
     border: 2px solid darkblue;
-}
-
-.grid.small {
-    height: 350px;
-    width: 350px;
-}
-
-.grid.medium {
-    height: 400px;
-    width: 400px;
-}
-
-.grid.large {
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 600px;
 }
 
 .grid .square {
-    border: 1px solid darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid darkblue;
     color: darkblue;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .grid .square.small {
@@ -81,13 +73,12 @@ html {
     height: calc(100% / var(--square-size-medium));
 }
 
-.grid .square.big {
-    width: calc(100% / var(--square-size-big));
-    height: calc(100% / var(--square-size-big));
+.grid .square.large {
+    width: calc(100% / var(--square-size-large));
+    height: calc(100% / var(--square-size-large));
 }
 
-
-
+/* footer */
 .footer {
     width: 100%;
     height: 8vh;
