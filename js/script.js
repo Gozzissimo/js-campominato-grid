@@ -23,30 +23,32 @@ play.addEventListener('click', function(){
     // creazione div square
     for (let i = numMin; i <= numMax; i++) {
         
-        // creare un div
-        let squareBox = document.createElement('div');
-
         //in base al livello sceglgo il numero di celle e grandezza grid
         if (level == 1) {
-
             // grid grande
             numMax == 100;
             squareBox.classList.add('large');
-
+            console.log(level);
+            console.log(numMax);
+            
         } else if (level == 2) {
-
             // grid media
             numMax == 81;
             squareBox.classList.add('medium');
             console.log(numMax);
-
-        } else if (level == 3) {
+            console.log(level);
             
+        } else if (level == 3) {
             // grid piccola
             numMax == 49;
             squareBox.classList.add('small');
+            console.log(level);
+            console.log(numMax);
         }
 
+        // creare un div
+        let squareBox = document.createElement('div');
+        
         // dargli la classe square
         squareBox.classList.add('square');
 
