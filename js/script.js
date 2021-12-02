@@ -11,3 +11,24 @@
 // Di cosa ho bisogno per generare i numeri ?
 //     Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 // Le validazioni e i controlli possiamo farli in un secondo momento.
+
+const play = document.querySelector('.play');
+const grid = document.querySelector('.grid');
+const select = document.getElementById('difficulty');
+let numMin = 1;
+let numMax = 100;
+
+
+//tracciare il cambio di livello
+select.addEventListener("change", function () {
+    let level = select.value;
+    console.log(level);
+
+});
+
+//in base al livello sceglgo il numero di celle
+
+
+//vado a creare il numero di celleche mi serve
+
+//click sulle celle
