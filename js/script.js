@@ -19,38 +19,42 @@ play.addEventListener('click', function(){
     grid.innerHTML = '';
 
     let level = select.value;
-
-    // creazione square
+    
+    // creazione div square
     for (let i = numMin; i <= numMax; i++) {
-
+        
         // creare un div
-        let square = document.createElement('div');
+        let squareBox = document.createElement('div');
 
-        //in base al livello sceglgo il numero di celle
+        //in base al livello sceglgo il numero di celle e grandezza grid
         if (level == 1) {
+
             // grid grande
             numMax == 100;
-            square.classList.add('large');
+            squareBox.classList.add('large');
 
         } else if (level == 2) {
+
             // grid media
             numMax == 81;
-            square.classList.add('medium');
+            squareBox.classList.add('medium');
+            console.log(numMax);
 
-        } else if (condition) {
+        } else if (level == 3) {
+            
             // grid piccola
             numMax == 49;
-            square.classList.add('small');
+            squareBox.classList.add('small');
         }
 
-        // dargli la classe
-        square.classList.add('square');
+        // dargli la classe square
+        squareBox.classList.add('square');
 
-        // inserire il numero
-        square.innerHTML = i;
+        // inserire il numero all'interno
+        squareBox.innerHTML = i;
 
         // click sulle celle
-        square.addEventListener('click', function () {
+        squareBox.addEventListener('click', function () {
             // colorare di azzurro la cella
             this.style.backgroundColor = 'lightblue';
 
@@ -58,7 +62,7 @@ play.addEventListener('click', function(){
 
         // appendiamo in grid e rendiamola visibile
         grid.classList.add('active');
-        grid.appendChild(square);
+        grid.appendChild(squareBox);
     }
 
 });

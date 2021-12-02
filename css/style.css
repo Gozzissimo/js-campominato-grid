@@ -58,7 +58,7 @@ select, button {
 }
 
 .active {
-    
+    display: flex;
 }
 
 .grid .square {
