@@ -57,6 +57,10 @@ select, button {
     width: 600px;
 }
 
+.active {
+    
+}
+
 .grid .square {
     display: flex;
     justify-content: center;
